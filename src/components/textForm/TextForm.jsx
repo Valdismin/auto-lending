@@ -1,6 +1,8 @@
 import {Form} from "@/components/form/Form";
 import "./textForm.scss";
 import Image from "next/image";
+import telegram from "../../../public/telegram.svg";
+import viber from "../../../public/telegram.svg";
 
 export const TextForm = ({title, description, contacts}) => {
     return (
@@ -12,8 +14,8 @@ export const TextForm = ({title, description, contacts}) => {
                     <div className="contacts">
                         <span className="phone-number">+375-29-194-08-94</span>
                         <div className="icons-wrapper">
-                            <Image src="/telegram.svg" alt="Phone" width={30} height={30} className="icon"/>
-                            <Image src="/viber.svg" alt="Phone" width={30} height={30} className="icon"/>
+                            <Image src={telegram} alt="Phone" width={30} height={30} className="icon"/>
+                            <Image src={viber} alt="Phone" width={30} height={30} className="icon"/>
                         </div>
                     </div>
                 }

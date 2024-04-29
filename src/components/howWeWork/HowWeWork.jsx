@@ -4,6 +4,13 @@ import "./howWeWork.scss"
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import {useCallback, useEffect, useState} from "react";
+import mail from "../../../public/mail-icon.svg";
+import handshake from "../../../public/handshake-icon.svg";
+import money from "../../../public/money-icon.svg";
+import document from "../../../public/document-icon.svg";
+import reverse from "../../../public/reverse-icon.svg";
+import quality from "../../../public/quality-icon.svg";
+
 
 export const PrevButton = (props) => {
     const {children, ...restProps} = props
@@ -121,14 +128,14 @@ export const HowWeWork = () => {
             <div className="embla" ref={emblaRef}>
                 <div className="how-we-work-wrapper embla__container">
                     <div className="how-we-work-item embla__slide">
-                        <Image src="/mail-icon.svg" alt="mail" className="image" width={120} height={120}/>
+                        <Image src={mail} alt="mail" className="image" width={120} height={120}/>
                         <h3 className="how-we-work-item-title">1.Оставьте заявку</h3>
                         <p className="how-we-work-item-text">Оставьте заявку на нашем сайте или позвоните нам по
                             телефону</p>
                     </div>
 
                     <div className="how-we-work-item embla__slide">
-                        <Image src="/handshake-icon.svg" alt="handshake" className="image" width={120} height={120}/>
+                        <Image src={handshake} alt="handshake" className="image" width={120} height={120}/>
                         <h3 className="how-we-work-item-title">2.Встреча с оценщиком</h3>
                         <p className="how-we-work-item-text">Специалист компании «АвтоВыкуп» оперативно выезжает по
                             указанному адресу. Осматривает транспортное средство, дает свое заключение о его техническом
@@ -137,27 +144,27 @@ export const HowWeWork = () => {
 
 
                     <div className="how-we-work-item embla__slide">
-                        <Image src="/money-icon.svg" alt="money" className="image" width={120} height={120}/>
+                        <Image src={money} alt="money" className="image" width={120} height={120}/>
                         <h3 className="how-we-work-item-title">3.Получение денег</h3>
                         <p className="how-we-work-item-text">Если вас устраивает цена, предложенная оценщиком, именно
                             она является окончательной, мы выплачиваем вам деньги наличными или на банк.карту/счет.</p>
                     </div>
 
                     <div className="how-we-work-item embla__slide">
-                        <Image src="/document-icon.svg" alt="docs" className="image" width={120} height={120}/>
+                        <Image src={document} alt="docs" className="image" width={120} height={120}/>
                         <h3 className="how-we-work-item-title">4.Оформление документов</h3>
                         <p className="how-we-work-item-text">После передачи денег Вам на руки, заключается договор
                             купли-продажи - официально.</p>
                     </div>
 
                     <div className="how-we-work-item embla__slide">
-                        <Image src="/reverse-icon.svg" alt="reverse" className="image" width={120} height={120}/>
+                        <Image src={reverse} alt="reverse" className="image" width={120} height={120}/>
                         <h3 className="how-we-work-item-title">5.Перерегистрация ТС</h3>
                         <p className="how-we-work-item-text">Мы самостоятельно перерегистрируем автомобиль в ДАИ.</p>
                     </div>
 
                     <div className="how-we-work-item embla__slide">
-                        <Image src="/quality-icon.svg" alt="quality" className="image" width={120} height={120}/>
+                        <Image src={quality} alt="quality" className="image" width={120} height={120}/>
                         <h3 className="how-we-work-item-title">6.Контроль качества</h3>
                         <p className="how-we-work-item-text">Оцените качество услуг по телефону (viber / telegram). Нам
                             важно мнение каждого!</p>
