@@ -1,0 +1,49 @@
+.text-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+
+  .text-wrapper {
+    color: #a90000;
+    width: 50%;
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .text {
+      color: #FFFFFF;
+
+      &.bottom-form {
+        color: #4e4f52;
+      }
+    }
+  }
+
+  &.bottom-form {
+    padding-top: 70px;
+
+    .text-wrapper {
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .icons-wrapper {
+          .icon {
+            margin-right: 10px;
+            cursor: pointer;
+          }
+        }
+
+        .phone-number {
+          margin-bottom: 20px;
+        }
+      }
+
+      .text {
+        color: #4e4f52;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
