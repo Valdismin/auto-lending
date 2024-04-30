@@ -1,3 +1,5 @@
+@import '../../app/mixins.scss';
+
 .our-services {
   background-color: #FFFFFF;
   padding-bottom: 70px;
@@ -45,10 +47,17 @@
         flex-direction: column;
 
         width: 346px;
-        height: 364px;
+        height: 400px;
         padding: 24px 24px 28px;
         font-size: 1.125rem;
         line-height: 1.5rem;
+
+        @include respond-to(md) {
+          border-radius: 15px!important;
+          width: 100%;
+          max-width: unset;
+          height: 100%;
+        }
 
         &:nth-child(1) {
           background-color: #F04E36;
@@ -59,6 +68,9 @@
           background-color: #3498DB;
           border-radius: 15px 15px 160px 15px;
           margin-top: 50px;
+          @include respond-to(custom) {
+            margin-top: 0;
+          }
         }
 
         &:nth-child(3) {
@@ -75,18 +87,55 @@
           margin-top: 50px;
           background-color: #16A085;
           border-radius: 15px 15px 160px 15px;
+          @include respond-to(custom) {
+            margin-top: 0;
+          }
         }
 
-        .block-title {
-          color: #fff;
-          font-weight: 700;
-          margin-bottom: 20px;
-          max-width: 281px;
+        .title-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          .arrow-accordion {
+            display: none;
+            @include respond-to(md) {
+              display: block;
+              cursor: pointer;
+            }
+            &.rotated {
+              transform: rotate(180deg);
+            }
+          }
+          .block-title {
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 20px;
+            max-width: 281px;
+          }
         }
 
         .block-description {
-          color: #fff;
+          color: #FFF;
+          font-family: Manrope, sans-serif;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+          @include respond-to(custom) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+          @include respond-to(md) {
+            height: 0;
+            overflow: hidden;
+
+            &.open {
+              height: fit-content;
+              overflow: unset;
+            }
+          }
         }
+
       }
     }
 
@@ -95,10 +144,17 @@
 
 .scroll-list .block {
   opacity: 0;
+  @include respond-to(md) {
+    opacity: 1;
+  }
 }
 
 .scroll-list.show .block {
   opacity: 0;
+  @include respond-to(md) {
+    opacity: 1;
+    animation: none;
+  }
   animation: fadeIn 3s forwards;
 }
 

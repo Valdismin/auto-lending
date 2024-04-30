@@ -91,7 +91,7 @@ export const usePrevNextButtons = (emblaApi, onButtonClick) => {
 
 export const HowWeWork = () => {
     const options = {
-        loop: true,
+        loop: false,
         align: 'start'
     }
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({

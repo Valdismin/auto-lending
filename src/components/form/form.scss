@@ -1,3 +1,4 @@
+@import '../../app/mixins.scss';
 .form {
   width: 100%;
   max-width: 540px;
@@ -5,6 +6,9 @@
   .form-title {
     color: #a90000;
     margin-bottom: 20px;
+    @include respond-to(custom) {
+      text-align: center;
+    }
   }
 
   .form-wrapper {
@@ -12,7 +16,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-
+    @include respond-to(custom) {
+      align-items: center;
+    }
     .button {
       background: #a90000;
       border: 2px solid #a90000;

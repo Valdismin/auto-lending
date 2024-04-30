@@ -1,6 +1,15 @@
-.header-wrapper {
+@import '../../app/mixins.scss';
 
+.common-header {
+
+}
+
+.desktop-header-wrapper {
+  @include respond-to(custom) {
+    display: none;
+  }
   background-color: #2C2D30;
+
   .container {
     width: 100%;
     padding-top: 10px;
@@ -8,7 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+
     .navigation-links-wrapper {
       display: flex;
       justify-content: space-between;
@@ -20,6 +29,7 @@
         color: #FFFFFF;
         font-size: 20px;
         font-weight: 700;
+
         &:hover {
           color: #a90000;
         }
@@ -55,4 +65,57 @@
   }
 
 
+}
+
+.mobile-header-wrapper {
+  display: none;
+  @include respond-to(custom) {
+    display: block;
+  }
+  background-color: #2C2D30;
+
+  .container {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-menu {
+      display: none;
+
+      &.is-opened {
+        background-color: #2C2D30;
+        top: 0;
+        display: flex;
+        height: calc(100vh - 92px);
+        left: 0;
+        position: absolute;
+        right: 0;
+        transform: translateY(12%);
+        transition: background-color 0.3s ease;
+
+        .navigation-links-wrapper {
+          border-top: 1px solid #4E4F52;
+          padding-bottom: 30px;
+          padding-top: 30px;
+          position: relative;
+          width: 100%;
+
+          .link {
+            padding: 16px 0;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 700;
+
+            &:active {
+              color: #a90000;
+            }
+          }
+        }
+      }
+
+    }
+  }
 }

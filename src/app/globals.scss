@@ -137,6 +137,37 @@ a {
   }
 }
 
+.header-footer-paddings {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @include respond-to(xxl-more) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include respond-to(xxl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include respond-to(xl) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @include respond-to(l) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @include respond-to(md) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  @include respond-to(xs) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .input {
   background: #dddddd;
   border: none;

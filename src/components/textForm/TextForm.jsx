@@ -2,11 +2,11 @@ import {Form} from "@/components/form/Form";
 import "./textForm.scss";
 import Image from "next/image";
 import telegram from "../../../public/telegram.svg";
-import viber from "../../../public/telegram.svg";
+import viber from "../../../public/viber.svg";
 
 export const TextForm = ({title, description, contacts}) => {
     return (
-        <div className={`${contacts && 'bottom-form'} text-form-wrapper  container`}>
+        <div className={`${contacts ? 'bottom-form' : ''} text-form-wrapper container`}>
             <div className="text-wrapper">
                 <h1 className="title">{title}</h1>
                 <p className={`text`}>{description}</p>

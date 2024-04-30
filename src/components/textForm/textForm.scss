@@ -1,22 +1,29 @@
+@import '../../app/mixins.scss';
 .text-form-wrapper {
   display: flex;
   justify-content: space-between;
   padding-bottom: 100px;
+  padding-top: 150px;
+  @include respond-to(custom) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .text-wrapper {
     color: #a90000;
     width: 50%;
-
+    padding-right: 100px;
+    @include respond-to(custom) {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 40px;
+    }
     .title {
       margin-bottom: 20px;
     }
 
     .text {
       color: #FFFFFF;
-
-      &.bottom-form {
-        color: #4e4f52;
-      }
     }
   }
 
