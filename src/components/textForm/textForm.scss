@@ -7,6 +7,7 @@
   @include respond-to(custom) {
     flex-direction: column;
     align-items: center;
+    padding-top: 80px;
   }
 
   .text-wrapper {
@@ -31,10 +32,19 @@
     padding-top: 70px;
 
     .text-wrapper {
+      @include respond-to(custom) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       .contacts {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include respond-to(custom) {
+          align-items: center;
+          flex-direction: row;
+        }
         .icons-wrapper {
           .icon {
             margin-right: 10px;
@@ -44,6 +54,10 @@
 
         .phone-number {
           margin-bottom: 20px;
+          @include respond-to(custom) {
+            margin-right: 20px;
+            margin-bottom: unset;
+          }
         }
       }
 

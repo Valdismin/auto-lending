@@ -1,3 +1,4 @@
+@import '../../app/mixins.scss';
 .how-we-work {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -13,7 +14,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    @include respond-to(custom) {
+      max-width: 380px;
+    }
+    @include respond-to(md) {
+      max-width: 250px;
+    }
+    @include respond-to(xs) {
+      max-width: 320px;
+    }
     .how-we-work-item-title {
       margin-bottom: 20px;
       height: 50px;
@@ -30,6 +39,15 @@
     .embla__container {
       display: flex;
       max-width: 960px;
+      @include respond-to(custom) {
+        max-width: 768px;
+      }
+      @include respond-to(md) {
+        max-width: 500px;
+      }
+      @include respond-to(xs) {
+        max-width: 320px;
+      }
       .embla__slide {
         flex: 0 0 100%;
         min-width: 0;
@@ -60,7 +78,6 @@
   appearance: none;
   background-color: transparent;
   touch-action: manipulation;
-  display: inline-flex;
   text-decoration: none;
   cursor: pointer;
   border: 0;

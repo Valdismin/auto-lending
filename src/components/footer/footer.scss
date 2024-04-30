@@ -1,3 +1,4 @@
+@import '../../app/mixins.scss';
 .footer-wrapper {
   background-color: #2C2D30;
   padding-top: 30px;
@@ -7,25 +8,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include respond-to(custom) {
+      flex-direction: column-reverse;
+    }
+    @include respond-to(xs) {
+      align-items: flex-start;
+    }
 
     .footer-logo {
       display: flex;
       align-items: center;
       .all-rights {
         margin-left: 10px;
+        font-size: 14px;
         color: #FFFFFF;
       }
     }
 
     .footer-links {
+      @include respond-to(custom) {
+        margin-bottom: 20px;
+      }
       ul {
         display: flex;
+        @include respond-to(xs) {
+          flex-direction: column;
+        }
 
         li {
           padding: 0 16px;
           color: #FFF;
           font-size: 20px;
           font-weight: 700;
+          @include respond-to(xs) {
+            padding: 16px 0;
+          }
           &:hover {
             color: #a90000;
           }
@@ -36,6 +53,9 @@
 
     .footer-contacts {
       .icons-wrapper {
+        @include respond-to(custom) {
+          margin-bottom: 20px;
+        }
         .icon {
           margin-right: 10px;
           cursor: pointer;
