@@ -28,7 +28,7 @@ export const MobileHeader = () => {
     return (
         <header className={`mobile-header-wrapper`}>
             <div className='container'>
-                <Image src={logo} alt="Logo" width={200} height={80} className="header-logo"/>
+                <a href="/"><Image src={logo} alt="Logo" width={200} height={80} className="header-logo"/></a>
                 <nav className={`nav-menu ${open ? 'is-opened header-footer-paddings' : ''}`}>
                     <ul className="navigation-links-wrapper">
                         <li className="link">

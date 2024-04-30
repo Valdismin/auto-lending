@@ -1,0 +1,22 @@
+@import '../../app/mixins.scss';
+.faq-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  padding-top: 150px;
+  @include respond-to(xxl) {
+    padding-top: 80px;
+  }
+  .heading-wrapper {
+    padding-top: 19px;
+    max-width: 589px;
+    width: 100%;
+    @include respond-to(xxl) {
+      margin-bottom: 40px;
+    }
+    .header {
+      margin-bottom: 10px;
+    }
+  }
+}
