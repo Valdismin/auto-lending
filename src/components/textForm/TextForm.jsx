@@ -14,7 +14,8 @@ export const TextForm = ({title, description, contacts}) => {
                     <div className="contacts">
                         <span className="phone-number">+375-29-194-08-94</span>
                         <div className="icons-wrapper">
-                            <Image src={telegram} alt="Phone" width={30} height={30} className="icon"/>
+                            <a href={'https://t.me/yurabut'}><Image src={telegram} alt="Phone" width={30} height={30}
+                                                                    className="icon"/></a>
                             <Image src={viber} alt="Phone" width={30} height={30} className="icon"/>
                         </div>
                     </div>

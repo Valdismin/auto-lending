@@ -27,8 +27,10 @@ export const DesktopHeader = () => {
                 </nav>
                 <div className="contacts-wrapper">
                     <div className="icons-wrapper">
-                        <Image src={telegram} alt="Phone" width={30} height={30} className="icon"/>
-                        <a href="viber://chat?number=%2B375291940894"><Image src={viber} alt="Phone" width={30} height={30} className="icon"/></a>
+                        <a href={'https://t.me/yurabut'}><Image src={telegram} alt="Phone" width={30} height={30}
+                                                                className="icon"/></a>
+                        <a href="viber://chat?number=%2B375291940894"><Image src={viber} alt="Phone" width={30}
+                                                                             height={30} className="icon"/></a>
                     </div>
 
                     <span className="phone-number"><a href="tel:+375-29-194-08-94">+375-29-194-08-94</a></span>
